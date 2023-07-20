@@ -1,0 +1,30 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="Trillium SHEL" Language="1033" Version="1.0"
+           Manufacturer="Trillium Labs" UpgradeCode="ACCBA0E7-D361-46B5-9DDA-0F5EBEA133FC" InstallerVersion="200">
+    
+    <Icon Id="add_remove.ico" SourceFile="add_remove.ico" />
+    <Property Id="ARPPRODUCTICON" Value="add_remove.ico" />
+
+    <Property Id="Publisher" Value="TRLM"/>
+    
+    <MajorUpgrade DowngradeErrorMessage="A newer version  is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="Trillium SHEL" Level="1">
+      <ComponentGroupRef Id="ShelComponents" />
+    </Feature>
+    
+    
+    <UIRef Id="WixUI_SHEL" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+
+  </Package>
+
+  <Fragment>
+    <StandardDirectory Id="TARGETDIR">
+      <Directory Id="ManufacturerFolder" Name="!(bind.property.Manufacturer)">
+        <Directory Id="INSTALLFOLDER" Name="Trillium SHEL" />
+      </Directory>
+    </StandardDirectory>
+  </Fragment>
+</Wix>

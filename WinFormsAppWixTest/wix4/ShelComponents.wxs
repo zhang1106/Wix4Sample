@@ -1,0 +1,12 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <ComponentGroup Id="ShelComponents" Directory="INSTALLFOLDER">
+      <Component Guid="BF64165B-FF8D-4492-9A78-676B5BA890B2" Bitness="default">
+        <File Id="WixInstallTestDll" Source="$(var.WinFormsAppWixTest.TargetPath)" KeyPath="yes" />
+      </Component>
+      <Component Guid="1D9694F8-FF38-11E9-899A-54B20319D0C5" Bitness="default">
+        <File Id="WixInstallSHELExe" Source="$(var.WinFormsAppWixTest.TargetDir)\WinFormsAppWixTest.exe" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

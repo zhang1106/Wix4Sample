@@ -1,0 +1,16 @@
+﻿<Project Sdk="WixToolset.Sdk/4.0.0">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutputPath>..\bin\wix</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="add_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Netfx.wixext" Version="4.0.1" />
+    <PackageReference Include="WixToolset.UI.wixext" Version="4.0.1" />
+    <PackageReference Include="WixToolset.Util.wixext" Version="4.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsAppWixTest.csproj" />
+  </ItemGroup>
+</Project>
